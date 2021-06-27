@@ -1,0 +1,11 @@
+name: repository dispatch test
+
+on:
+  repository_dispatch:
+    types: [hello]
+
+jobs:
+  echo-hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello world"
